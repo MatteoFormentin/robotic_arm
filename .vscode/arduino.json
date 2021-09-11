@@ -1,0 +1,6 @@
+{
+    "board": "arduino:megaavr:nona4809",
+    "sketch": "robotic_arm.ino",
+    "port": "/dev/cu.usbmodem145101",
+    "configuration": "mode=on"
+}
