@@ -1,6 +1,5 @@
 #include "conf.h"
 #include <Servo.h>
-#include <math.h>
 
 Servo axis0_servo;
 Servo axis1_servo;
