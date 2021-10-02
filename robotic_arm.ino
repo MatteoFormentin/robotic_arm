@@ -5,7 +5,7 @@ int val = 90;
 void setup()
 {
     beginSerial();
-    beginArms();
+    beginAxis();
 }
 
 void loop()

@@ -30,10 +30,9 @@
             "cppStandard": "c++11",
             "defines": [
                 "F_CPU=16000000L",
-                "ARDUINO=10813",
+                "ARDUINO=10816",
                 "ARDUINO_AVR_NANO_EVERY",
                 "ARDUINO_ARCH_MEGAAVR",
-                "AVR_NANO_4809_328MODE",
                 "MILLIS_USE_TIMERB3",
                 "NO_EXTERNAL_I2C_PULLUP",
                 "__DBL_MIN_EXP__=(-125)",
