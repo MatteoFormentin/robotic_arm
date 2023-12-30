@@ -3,11 +3,11 @@
 void beginSerial()
 {
     Serial.begin(115200);
-    Serial.println("------- EEZYBOT ARM MK2  --------");
+    Serial.println("-------- EEZYBOT ARM MK2 ---------");
     Serial.println("     Firmware Version " + String(FIRMWARE_VERSION));
     Serial.println("     HW: Carlo Franciscone");
     Serial.println("     SW: Matteo Formentin");
-    Serial.println("---------------------------------");
+    Serial.println("----------------------------------");
 }
 
 void serialLoop()
@@ -133,8 +133,6 @@ void serialLoop()
                     int axis = argument.substring(0, separator_index2 + 1).toInt();
                     int angle = argument.substring(separator_index2 + 1, argument.length()).toInt();
 
-                    Serial.println(angle);
-
                     switch (axis)
                     {
                     /*------ MOVE AXIS 0 TO AN ANGLE ------*/
@@ -178,15 +176,11 @@ void serialLoop()
                     float x = argument.substring(0, separator_index2 + 1).toFloat();
                     float y = argument.substring(separator_index2 + 1, argument.length()).toFloat();
 
-                    Serial.println(x);
-                    Serial.println(y);
-
                     int ax1 = inverseKinematicsAX1(x, y);
                     int ax2 = inverseKinematicsAX2(x, y);
                     moveAxis1(ax1);
                     moveAxis2(ax2);
-                    Serial.println("AX 1 " + String(ax1));
-                    Serial.println("AX 2 " + String(ax2));
+
                     Serial.println("X " + String(getClawPoseX()) + " Y " + String(getClawPoseY()));
                 }
             }
